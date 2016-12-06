@@ -2,6 +2,7 @@ function fbpost(){
   $.ajax({
     url: "https://reddit.com/r/aww/hot",
     method: 'get',
+    headers: {Access-Control-Allow-Origin:"*"}
     error: function(status){
 
     },
