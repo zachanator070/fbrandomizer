@@ -1,16 +1,13 @@
 function fbpost(){
   $.ajax({
-    url: "https://reddit.com/r/aww/hot",
+    url: "/url",
     method: 'get',
-    headers: {"Access-Control-Allow-Origin":"*"},
     error: function(status){
 
     },
     success: function(data, status){
       console.log(data);
-      var url = "https://developers.facebook.com/docs/";
-      var caption = "facebook docs"
-      showui(url, caption);
+      showui(data.url, data.caption);
     }
   });
 
