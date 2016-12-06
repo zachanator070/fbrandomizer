@@ -22,6 +22,8 @@ $.ready(function(){
 function checkLogin(){
   FB.getLoginStatus(function(response) {
 
+    console.log(response);
+
     // logged in but not authorized
     if(response.status === "not_authorized"){
 
