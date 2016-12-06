@@ -31,8 +31,8 @@ function checkLogin(){
 
     // logged in and authorized
     if(response.status === "connected"){
-      $('postbutton').removeClass('disabled');
-      $('postbutton').text("Post Something Random");
+      $('#postbutton').removeClass('disabled');
+      $('#postbutton').text("Post Something Random");
     }
 
     // not logged in
