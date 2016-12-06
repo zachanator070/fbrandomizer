@@ -13,9 +13,24 @@
     <!-- <link rel="stylesheet" href="/css/style.css"> -->
     <script src='js/initfb.js'></script>
     <script src='js/fbpost.js'></script>
+
+
+
     <style>
+    @keyframes example {
+    from {-webkit-filter: blur(0px); }
+    to {-webkit-filter: blur(2px); }
+    }
+
+
     body {
-      -webkit-filter: blur(2px); 
+      background-image: url('https://media.timeout.com/images/100519023/image.jpg');
+      background-repeat: no-repeat;
+      height: 100vh;
+      background-size: cover;
+      animation-name: example;
+      animation-duration: 4s;
+      animation-iteration-count:infinite;
     }
     </style>
   </head>
@@ -23,8 +38,22 @@
   <body>
 
 
-  <div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false" onlogin='checkLogin()'></div>
-  <button id='postbutton' type="button" class="btn btn-primary disabled" onclick="fbpost()">Login to Facebook First</button>
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Drunk Status</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Post social status' with partial consent</h5>
+      </div>
+      <div class="row center">
+        <div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false" onlogin='checkLogin()'></div>
+        <button id='postbutton' type="button" class="btn btn-primary disabled" onclick="fbpost()">Login to Facebook First</button></span></div>
+      </div>
+      <br><br>
+
+    </div>
+  </div>
 
   </body>
 </html>
