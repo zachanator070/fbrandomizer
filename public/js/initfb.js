@@ -4,10 +4,7 @@ window.fbAsyncInit = function() {
     xfbml      : true,
     version    : 'v2.6'
   });
-
-  FB.getLoginStatus(function(response) {
-      checkLogin(response);
-  });
+  checkLogin();
 };
 
 (function(d, s, id){
@@ -19,6 +16,8 @@ window.fbAsyncInit = function() {
  }(document, 'script', 'facebook-jssdk'));
 
 
-function checkLogin(response){
-  console.log(response);
+function checkLogin(){
+  FB.getLoginStatus(function(response) {
+    console.log(response);
+  });
 }
