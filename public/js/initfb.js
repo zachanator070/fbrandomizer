@@ -1,5 +1,5 @@
 
-$.ready(function(){
+$(document).ready(function(){
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '359867534367940',
