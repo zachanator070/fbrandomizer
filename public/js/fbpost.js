@@ -3,7 +3,7 @@ function fbpost(){
     url: "/url",
     method: 'get',
     error: function(status){
-
+      rbpost();
     },
     success: function(data, status){
       console.log(data);

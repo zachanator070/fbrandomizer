@@ -17,21 +17,33 @@ server.use(express.static('public'));
 
 server.get('/url', function(req, res){
 
-  request.get('https://reddit.com/r/aww.json', function (error, response, body) {
+  console.log('GET /url');
+
+  var srcs = ['https://reddit.com/r/aww.json',
+              'https://reddit.com/r/funny.json',
+              'https://reddit.com/r/mildyinteresting.json',
+              'https://reddit.com/r/showerthoughts.json'];
+  var srcindex = Math.floor((Math.random() * srcs.length) + 0);
+
+  var srcurl = srcs[srcindex]
+  console.log(srcurl);
+
+  request.get(srcurl, function (error, response, body) {
+
     if (!error && response.statusCode == 200) {
-      // console.log(body) // Show the HTML for the Google homepage.
 
       body = JSON.parse(body);
-      var index = Math.floor((Math.random() * body.data.children.length) + 0);;
+      var index = Math.floor((Math.random() * body.data.children.length) + 0);
 
       var url = body.data.children[index].data.url;
       var caption = body.data.children[index].data.title;
       res.send({"url": url, "caption": caption});
     }
     else{
-      res.status(500).send(response);
+      console.log(error);
+      res.status(500).send(error);
     }
-  })
+  });
 
 });
 
