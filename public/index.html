@@ -18,12 +18,16 @@
 
 
     <style>
+
+    @font-face {
+      font-family: chalk;
+      src: url(chawp.ttf);
+    }
+
     @keyframes example {
     from {-webkit-filter: blur(0px); }
     to {-webkit-filter: blur(1px); }
     }
-
-
     body {
       background-image: url('https://media.timeout.com/images/100519023/image.jpg');
       background-repeat: no-repeat;
@@ -39,8 +43,15 @@
     }
 
     .title{
-      font-size: 50px;
+      font-family: chalk;
+      font-size: 75px;
     }
+
+    .flow-text {
+
+      color: white;
+    }
+
     </style>
   </head>
 
@@ -50,8 +61,8 @@
 
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
-      <br><br>
-      <h1 class="header center orange-text title">Drunk Poster</h1>
+      <br><br><br><br><br>
+      <h1 class="header center white-text title">Drunk Poster</h1>
       <div class="row center">
 
         <div class='col-md-2'></div>
@@ -59,14 +70,14 @@
         <div class='col-md-8'>
           <div class='panel panel-default'>
             <div class='panel-body'>
-              <h5 class="header col s12 light">Post social status' with partial consent</h5>
+              <h2 class="header col s12 light">Post social status' with partial consent</h2>
               <p>
                 Tired of a boring social media life? <br>
                 Not enough booze around to get hammered? <br>
                 Not an alcoholic but wondered what it was like? <br>
-                <h2>
+                <h3>
                   Then the Drunk Poster is for you!
-                </h2>
+                </h3>
                 Just login to facebook with the link below, then click the big button to
                 post something random to make life a little more interesting.
               </p>
@@ -75,7 +86,7 @@
         </div>
 
         <div class='col-md-2'></div>
-        
+
       </div>
       <div class="row center">
         <div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false" onlogin='checkLogin()'></div>
