@@ -21,8 +21,6 @@
     from {-webkit-filter: blur(0px); }
     to {-webkit-filter: blur(2px); }
     }
-
-
     body {
       background-image: url('https://media.timeout.com/images/100519023/image.jpg');
       background-repeat: no-repeat;
@@ -32,6 +30,17 @@
       animation-duration: 4s;
       animation-iteration-count:infinite;
     }
+
+    .flow-text {
+      
+      color: white;
+    }
+
+    .s12 {
+      background-color: lightblue;
+    }
+
+
     </style>
   </head>
 
@@ -41,10 +50,12 @@
 
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
-      <br><br>
+      <br><br><br><br><br>
       <h1 class="header center orange-text">Drunk Status</h1>
       <div class="row center">
-        <h5 class="header col s12 light">Post social status' with partial consent</h5>
+        <div class="row">
+        <h5 class="col s12"><span class="flow-text">Post a social status with partial consent</span></h5>
+      </div>
       </div>
       <div class="row center">
         <div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false" onlogin='checkLogin()'></div>
